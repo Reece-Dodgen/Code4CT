@@ -1,0 +1,1191 @@
+    //HOME PAGE
+    // BODY CONTAINER
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+    // Nav bar styling
+.main-nav{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: white;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+     a{
+        float: left;
+        display: block;
+        color: pink;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 50px;
+    }
+    .active{
+        background-color: white;
+        color: white;
+        padding: 0;
+        height: 50px;
+    }
+   a:hover{
+        background-color: white;
+        color: black;
+    }
+    .icon{
+        display: none;
+    }
+    .active{
+        img{
+            height: 50px;
+        }
+    } 
+        // Dropdown button
+    .drop-down{
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        top: 78px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    .drop-down:hover .dropdown-content{
+        display: block;
+    }
+    .search-bar{
+        
+        float: right;
+        position: relative;
+        top: 30px;
+   }
+   .button i{
+       font-size: 20px;
+   }
+}
+.drop-down span{
+    display: none;
+}
+
+
+.box2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px pink;
+    // .sub-grid{
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: 1fr 1fr;
+    // }
+}
+    // Slideshow styling
+* {box-sizing: border-box;}
+body{
+    font-family: Verdana, sans-serif;
+}
+
+.mySlides{
+    display: none;
+}
+img{
+    vertical-align: middle;
+}
+
+.slideshow-container{
+    position: relative;
+    margin: auto;
+}
+
+.text{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.number-text{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background-color: #717171;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
+// slider section
+.first-background{
+    background: url("../images/Code4CT-homepage.jpg") center,linear-gradient(180deg, #2b3946,#384a5b);
+    background-size: cover;
+    background-repeat: no repeat;
+    padding: 9em 26%;
+    color: white;
+    // styling article
+article{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(400, 120, 187, 0.5);
+    padding: 20px;
+    // styling h1
+    h1{
+        margin: 0;
+        text-align: center;
+        font-size: 40px;
+        opacity: 1;
+    }
+    // styling p-tag
+    p{
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        opacity: 1;
+        color: #fff;
+    }
+}
+    // Buttons
+    button{
+        width: 150px;
+        border: solid 2px white;
+        color: white;
+        padding: 10px;
+        margin: 0 auto;
+        background-color: transparent;
+        margin-left: 100px;
+        // hover
+        button:hover{
+            background-color: grey;
+            opacity: 0.5;
+            transition: all 0.2s;
+        }
+    }
+}
+// second-background on slider
+.second-background{
+    background: url("../images/code4ct_homeslider3.jpg") center,linear-gradient(180deg, #2b3946,#384a5b);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 9em 26%;
+    color: white;
+    // styling article
+article{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(400, 120, 187, 0.5);
+    padding: 20px;
+    // styling h1
+    h1{
+        margin: 0;
+        text-align: center;
+        font-size: 40px;
+        opacity: 1;
+    }
+    // styling p-tag
+    p{
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        opacity: 1;
+        color: #fff;
+    }
+}
+    // Buttons
+    button{
+        width: 150px;
+        border: solid 2px white;
+        color: white;
+        padding: 10px;
+        background-color: transparent;
+        margin-left: 100px;
+        // hover
+        button:hover{
+            background-color: grey;
+            opacity: 0.5;
+            transition: all 0.2s;
+        }
+    }
+}
+//Third background in slider
+.third-background{
+    background: url("../images/Code4CT-WhyICode-Kholiswa.jpg")  center,linear-gradient(180deg, #2b3946,#384a5b);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 9em 26%;
+    color: white;
+    // styling article
+article{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(400, 120, 187, 0.5);
+    padding: 20px;
+    // styling h1
+    h1{
+        margin: 0;
+        text-align: center;
+        font-size: 40px;
+        opacity: 1;
+    }
+    // styling p-tag
+    p{
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        opacity: 1;
+        color: #fff;
+    }
+}
+    // Buttons
+    button{
+        width: 150px;
+        border: solid 2px white;
+        color: white;
+        padding: 10px;
+        background-color: transparent;
+        margin-left: 100px;
+        // hover
+        button:hover{
+            background-color: grey;
+            opacity: 0.5;
+            transition: all 0.2s;
+        }
+    }
+}
+
+// Who we are styling section
+.box3{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px pink;
+    .sub-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        p{
+            grid-row: 2/3;
+        }
+        .image-section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        img{
+            text-align: center;
+            width: 100%;
+            float: right;
+        }
+    }
+}
+// Icons styling section
+.box4{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px solid pink;
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        background-color: black;
+        color: pink;
+        grid-gap: 10px;
+        h4{
+            font-size: 25px;
+            color: #ff0090;
+            text-align: center;
+        }
+        p{
+            font-size: 18px;
+            text-align: center;
+        }
+        .icon1{
+            grid-column: 1;
+            padding: 20px;
+        }
+        .icon2{
+            grid-column: 2;
+            padding: 20px;
+        }
+        .icon3{
+            grid-column: 3;
+            padding: 20px;
+        }
+        .icon4{
+            grid-column: 4;
+            padding: 20px;
+        }
+        img{
+            width: 180px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+// Portfolio styling section
+.box5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    .text-container{
+        grid-column: 1/4;
+    }
+    .port-images{
+        height: 80vh;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        grid-column: 1/4;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        .four-images{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            grid-gap: 10px;
+        }
+    }
+}
+// Meet our team styling section 
+.box6{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    .meet-team{
+        grid-column: 1/3;
+    }
+    img{
+        width: 50%;
+        float: left;
+    }
+}
+// Countdown timer styling section
+.box7{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    background-color: #000;
+    color: white;
+    div{
+        margin: 30px;
+        .line{
+            width: 50px;
+            height: 10px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        h3{
+            text-align: center;
+        }
+    }
+}
+
+.box8{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px pink;
+    .fa-paper-plane{
+        color: #ffb3b3;
+    }
+    h2{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .input{
+        text-align: center;
+    }
+}
+
+.box9{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px pink;
+    background-color: #000;
+    * {
+		box-sizing: border-box;
+	}
+
+	body > ul {
+		position: absolute;
+		top: 50%;
+		width: 800px;
+		height: 200px; 
+		left: 50%;
+		margin-left: -400px;
+		margin-top: -130px;
+	}
+ 
+	ul > li {
+		width: 25%;
+		list-style-type: none;
+        // position: absolute;
+        // position: inline;
+        display: inline-block;
+		top: 0;
+		padding: 20px;
+		height: 50px; 
+		opacity: 0;
+		padding-top: 40px;
+		text-align: center;
+		transition: 1s opacity; 
+	}
+// li{
+//     // width: 
+// }
+        ul li img{
+            width: 15%;
+        }
+	.active {
+		opacity: 1;
+	}
+  
+	p {
+		font-family: sans-serif;
+		font-size: 13px;
+    color: #646566;
+		line-height: 1.5em;
+	}
+
+	strong { 
+    color: #fff;
+    font-weight: 700;
+		font-size: 60px; 
+    line-height: 100px; 
+	}
+}
+
+// Carousel section
+.carousel{
+    grid-column: 1/4;
+    background-color: #000;
+// width: 100%;
+overflow: hidden;
+    .subCarousel{
+        animation-name: carousel;
+        animation-duration:18s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        width: 5880px;
+        position: relative;
+        left:100%; 
+        img{
+           margin-right: 50px;
+        }
+    } 
+}
+@keyframes carousel{
+    100%{
+       position: relative;
+       left:-2880px; 
+    }
+}
+
+
+// styling footer for home-page
+.page-footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    .helpAndSupport{
+        grid-column: 3/4;
+    }
+}
+
+.footer-bar{
+    border: solid 2px pink;
+    background-color: pink;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    .copy-right{
+        display: inline;
+        float: left;
+    }
+    .followUs{
+        display: inline;
+        float: right;
+        h3, p{
+            display: inline;
+            float: right;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+//CONTACT PAGE
+// Contact page styling
+.contact-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+}
+.contact-us{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px pink solid;
+}
+// Footer for contact page
+ .page-footer2{
+     grid-column: 1/4;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: auto;
+     .helpAndSupport2{
+         grid-column: 3/4;
+     }
+ }
+
+ .footer-bar2{
+     border: solid 2px pink;
+     background-color: pink;
+     grid-column-start: 1;
+     grid-column-end: 4;
+     .copy-right2{
+         display: inline;
+         float: left;
+     }
+     .followUs2{
+         display: inline;
+         float: right;
+         margin-right: 20px;
+     }
+ }
+
+ .contact-us{
+     text-align: center;
+     background-color: #c1bbaf;
+ }
+ 
+ .contactUs-container{
+     grid-column: 1/4;
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     grid-gap: 50px;
+     .contact-column{
+        // border: 1px solid black;
+        //  grid-column: 2/3;
+         float: right;
+     }
+ }
+ form{
+    //  grid-column: 1/4;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: auto;
+     grid-gap: 10px;
+     form{
+         grid-column: 1/2;
+     }
+     h2{
+         grid-column: 1/4;
+     }
+     #textarea{
+         grid-column: 1/4;
+        //  width: 300px;
+     }
+     input{
+        //  width: 100px;
+     }
+     .email{
+         background-color: pink;
+         border-color: pink;
+     }
+ }
+ #contact-form{
+    //  width: 400px;
+    //  border: 1px solid black;
+     float: left;
+ }
+
+ .google-map{
+     grid-column: 1/4;
+     width: 100%;
+ }
+
+//  ABOUT PAGE
+// Grid layout for about-page
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+}
+
+
+// Styling footer for about-page
+.page-footerAbout{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    .helpAndSupportAbout{
+        grid-column: 3/4;
+    }
+}
+
+.footer-barAbout{
+    border: solid 2px pink;
+    background-color: pink;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    .copy-rightAbout{
+        display: inline;
+        float: left;
+    }
+    .followUsAbout{
+        display: inline;
+        float: right;
+        margin-right: 20px;
+    }
+}
+
+// About us section
+.about-us{
+    grid-column: 1/4;
+    text-align: center;
+    background-color: #c1bbaf;
+}
+
+.section{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    .column-one{
+        grid-column: 1/2;
+    }
+}
+#columnOneButton{
+    margin-left: 100px;
+    background-color: #ffb3b3;
+    border-color: #ffb3b3;
+}
+
+.column-two{
+    img{
+        width: 100%;
+    }
+}
+
+.section-two{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    .column-two{
+        grid-column: 2/2;
+    }
+}
+
+.sectionTwoColumn{
+    img{
+        width: 100%;
+    }
+}
+
+.subGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    .sub-gridOne{
+        grid-column: 1/2;
+    }
+}
+
+// Styling the timer section
+.timer{
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-gap: 50px;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    padding-left: 80px;
+    color: white;
+   }
+   /*class circle width,margin,display,position,and text-align*/
+   .circle{
+      width: 100%;
+      margin: 6px 20px 20px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+   }
+   /*class timer div width,height,padding-top*/
+   .timer div{
+        width: 150px;
+        height:150px;
+        padding-top: 50px;
+   }
+
+.fa-paper-plane{
+    color: #ffb3b3;
+}
+
+div#subscribe{
+    grid-column: 1/4;
+    h2{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .input{
+        text-align: center;
+        input{
+            border-color: #ffb3b3;
+        }
+    }
+    .submit{
+        background-color: #ffb3b3;
+        border-color: #ffb3b3;
+    }
+}
+
+
+// PORTFOLIO
+// Porfolio grid layout
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+}
+
+// Gallery section in portfolio
+#flexGallery {
+    grid-column: 1/4;
+    background: #333;
+    padding: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+  }
+ 
+ #flexGallery div {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+  }
+ 
+ #flexGallery div{
+      width: 200px;
+      height: 200px;
+      border: solid 2px black;
+  }
+
+//   COURSES PAGE
+// Courses-page grid layout
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+}
+// Sub courses grid
+.subCoursesGrid{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 50px;
+    h1{
+        text-align: center;
+        grid-column: 1/5;
+        background-color: pink;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    i{
+        color: rgb(228, 44, 75);
+
+    }
+    .cart{
+        grid-column: 4/5;
+        grid-row: 2/3;
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseOne{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTwo{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseThree{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseFour{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseFive{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseSix{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseSeven{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+        grid-row:4/5;
+    }
+}
+
+.subCoursesGridTwo{
+    grid-column:1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 50px;
+    h1{
+        text-align: center;
+        grid-column: 1/4;
+        background-color: pink;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    i{
+        color: rgb(228, 44, 75);
+    }
+    .courseEight{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseNine{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTen{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.subCoursesGridThree{
+    grid-column:1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 50px;
+    h1{
+        text-align: center;
+        grid-column: 1/4;
+        background-color: pink;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    i{
+        color: rgb(228, 44, 75);
+    }
+    .courseEleven{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 350px;
+        height: 350px;
+    }
+    .courseTwelve{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.subCoursesGridFour{
+    grid-column:1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 50px;
+    h1{
+        text-align: center;
+        grid-column: 1/4;
+        background-color: pink;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    i{
+        color: rgb(228, 44, 75);
+    }
+    .courseThirteen{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseFourteen{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseFifteen{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseSixteen{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.subCoursesGridFive{
+    grid-column:1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 50px;
+    h1{
+        text-align: center;
+        grid-column: 1/4;
+        background-color: pink;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    i{
+        color: rgb(228, 44, 75);
+    }
+    .courseNineteen{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTwenty{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTwentyOne{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTwentyTwo{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTwentyThree{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+    .courseTwentyFour{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.subCoursesGridSix{
+    grid-column:1/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 50px;
+    h1{
+        text-align: center;
+        grid-column: 1/4;
+        background-color: pink;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    i{
+        color: rgb(228, 44, 75);
+    }
+    .coursesOne{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 100%;
+        height: 800px;
+    }
+    .coursesTwo{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 100%;
+        height: 800px; 
+    }
+    .coursesThree{
+        border: 2px solid pink;
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px pink;
+        width: 100%;
+        height: 800px;
+    }
+}
+
+// .expandOne{
+//     border: 2px solid pink;
+// }
+
+
+
+
+    // Responsive design
+@media screen and (max-width: 600px) {
+    .drop-down span{
+        display: none;
+    }
+  
+    .main-nav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .main-nav a.icon {
+      float: right;
+      display: block;
+    }
+  
+    .main-nav.responsive //{position: relative;}
+    .main-nav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .main-nav.responsive a {background-color: #000;
+      float: none;
+      display: block;
+      text-align: center;
+    }
+
+    .responsive .drop-down span{
+        display: block;
+    }
+
+    .main-nav.responsive .dropdown {float: none;}
+    .main-nav.responsive .dropdown-content {position: relative;}
+    .main-nav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    .text{
+        font-size: 11px
+    }
+}

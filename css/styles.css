@@ -1,0 +1,352 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px; }
+
+.main-nav {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: white;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 20; }
+  .main-nav a {
+    float: left;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 50px; }
+  .main-nav .active {
+    background-color: white;
+    color: white;
+    padding: 0;
+    height: 50px; }
+  .main-nav a:hover {
+    background-color: white;
+    color: black; }
+  .main-nav .icon {
+    display: none; }
+  .main-nav .active img {
+    height: 50px; }
+  .main-nav .drop-down {
+    position: relative;
+    display: inline-block; }
+  .main-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 78px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1; }
+  .main-nav .drop-down:hover .dropdown-content {
+    display: block; }
+  .main-nav .search-bar {
+    float: right;
+    position: relative;
+    top: 30px; }
+  .main-nav .button i {
+    font-size: 20px; }
+
+.drop-down span {
+  display: none; }
+
+.box2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: solid 1px pink; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Verdana, sans-serif; }
+
+.mySlides {
+  display: none; }
+
+img {
+  vertical-align: middle; }
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto; }
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; }
+
+.number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; }
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+.active {
+  background-color: #717171; }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+.first-background {
+  background: url("../images/Code4CT-homepage.jpg") center, linear-gradient(180deg, #2b3946, #384a5b);
+  background-size: cover;
+  background-repeat: no repeat;
+  padding: 9em 26%;
+  color: white; }
+  .first-background article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(255, 120, 187, 0.5);
+    padding: 20px; }
+    .first-background article h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 40px;
+      opacity: 1; }
+    .first-background article p {
+      margin: 0;
+      text-align: center;
+      font-size: 20px;
+      opacity: 1;
+      color: #fff; }
+  .first-background button {
+    width: 150px;
+    border: solid 2px white;
+    color: white;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: transparent;
+    margin-left: 40px; }
+    .first-background button button:hover {
+      background-color: grey;
+      opacity: 0.5;
+      transition: all 0.2s; }
+
+.second-background {
+  background: url("../images/code4ct_homeslider3.jpg") center, linear-gradient(180deg, #2b3946, #384a5b);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 9em 26%;
+  color: white; }
+  .second-background article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(255, 120, 187, 0.5);
+    padding: 20px; }
+    .second-background article h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 40px;
+      opacity: 1; }
+    .second-background article p {
+      margin: 0;
+      text-align: center;
+      font-size: 20px;
+      opacity: 1;
+      color: #fff; }
+  .second-background button {
+    width: 150px;
+    border: solid 2px white;
+    color: white;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 40px; }
+    .second-background button button:hover {
+      background-color: grey;
+      opacity: 0.5;
+      transition: all 0.2s; }
+
+.third-background {
+  background: url("../images/Code4CT-WhyICode-Kholiswa.jpg") center, linear-gradient(180deg, #2b3946, #384a5b);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 9em 26%;
+  color: white; }
+  .third-background article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(255, 120, 187, 0.5);
+    padding: 20px; }
+    .third-background article h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 40px;
+      opacity: 1; }
+    .third-background article p {
+      margin: 0;
+      text-align: center;
+      font-size: 20px;
+      opacity: 1;
+      color: #fff; }
+  .third-background button {
+    width: 150px;
+    border: solid 2px white;
+    color: white;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 40px; }
+    .third-background button button:hover {
+      background-color: grey;
+      opacity: 0.5;
+      transition: all 0.2s; }
+
+.box3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: solid 1px pink; }
+  .box3 .sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto; }
+    .box3 .sub-grid p {
+      grid-row: 2/3; }
+    .box3 .sub-grid .image-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px; }
+    .box3 .sub-grid img {
+      text-align: center;
+      width: 100%;
+      float: right; }
+
+.box4 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: 1px solid pink; }
+  .box4 article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: black;
+    color: pink;
+    grid-gap: 10px; }
+    .box4 article h4 {
+      font-size: 25px;
+      color: #ff0090;
+      text-align: center; }
+    .box4 article p {
+      font-size: 18px;
+      text-align: center; }
+    .box4 article .icon1 {
+      grid-column: 1;
+      padding: 20px; }
+    .box4 article .icon2 {
+      grid-column: 2;
+      padding: 20px; }
+    .box4 article .icon3 {
+      grid-column: 3;
+      padding: 20px; }
+    .box4 article .icon4 {
+      grid-column: 4;
+      padding: 20px; }
+    .box4 article img {
+      width: 180px;
+      display: block;
+      margin: 0 auto; }
+
+.box5 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: 1px solid pink;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto; }
+  .box5 .text-container {
+    grid-column: 1/4; }
+  .box5 .port-images {
+    height: 80vh;
+    grid-column: 1/4;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr; }
+    .box5 .port-images img {
+      width: 100%;
+      height: 100%; }
+    .box5 .port-images .four-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      grid-gap: 10px; }
+
+.box6 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: 1px solid pink; }
+
+@media screen and (max-width: 600px) {
+  .drop-down span {
+    display: none; }
+
+  .main-nav a:not(:first-child), .dropdown .dropbtn {
+    display: none; }
+
+  .main-nav a.icon {
+    float: right;
+    display: block; }
+
+  .main-nav.responsive {
+    position: relative; }
+
+  .main-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .main-nav.responsive a {
+    background-color: #000;
+    float: none;
+    display: block;
+    text-align: center; }
+
+  .responsive .drop-down span {
+    display: block; }
+
+  .main-nav.responsive .dropdown {
+    float: none; }
+
+  .main-nav.responsive .dropdown-content {
+    position: relative; }
+
+  .main-nav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left; }
+
+  .text {
+    font-size: 11px; } }
+
+/*# sourceMappingURL=styles.css.map */
