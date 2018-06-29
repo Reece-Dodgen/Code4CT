@@ -558,6 +558,482 @@ overflow: hidden;
     }
 }
 
+// Responsive design for home-page (mobile first)
+    @media screen and (max-width: 600px) {
+        .drop-down span{
+            display: none;
+        }
+      
+        .main-nav a:not(:first-child), .dropdown .dropbtn {
+          display: none;
+        }
+        .main-nav a.icon {
+          float: right;
+          display: block;
+        }
+      
+        .main-nav.responsive //{position: relative;}
+        .main-nav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .main-nav.responsive a {background-color: #000;
+          float: none;
+          display: block;
+          text-align: center;
+        }
+    
+        .responsive .drop-down span{
+            display: block;
+        }
+    
+        .main-nav.responsive .dropdown {float: none;}
+        .main-nav.responsive .dropdown-content {position: relative;}
+        .main-nav.responsive .dropdown .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+    
+        .text{
+            font-size: 11px
+        }
+    
+        // Carousel section
+        .carousel{
+            grid-column: 1/2;
+            background-color: #000;
+        // width: 100%;
+        overflow: hidden;
+            .subCarousel{
+                animation-name: carousel;
+                animation-duration:18s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                width: 5880px;
+                position: relative;
+                left:100%; 
+                img{
+                margin-right: 50px;
+                }
+            } 
+        }
+        @keyframes carousel{
+            100%{
+            position: relative;
+            left:-2880px; 
+            }
+        }
+
+        //Submit section
+        .box8{
+            grid-column-start: 1;
+            grid-column-end:2;
+            border: solid 1px pink;
+            .fa-paper-plane{
+                color: #ffb3b3;
+            }
+            h2{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            .input{
+                text-align: center;
+            }
+        }
+
+        // Meet our team styling section 
+        .box6{
+            grid-column: 1/2;
+            border: 1px solid pink;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            .meet-team{
+                grid-column: 1/2;
+            }
+            img{
+                width: 50%;
+                float: left;
+            }
+        }
+
+        // Portfolio section
+        .box5{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            border: 1px solid pink;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            .text-container{
+                grid-column: 1/2;
+            }
+            .port-images{
+                height: 431vh;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                img{
+                    width: 100%;
+                    // height: 100%;
+                }
+                grid-column: 1/2;
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: 1fr;
+                .four-images{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    height: 100%;
+                    grid-gap: 10px;
+                }
+            }
+        }
+
+        // Icons styling section
+        .box4{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border: 1px solid pink;
+            article{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                background-color: black;
+                color: pink;
+                grid-gap: 10px;
+                h4{
+                    font-size: 25px;
+                    color: #ff0090;
+                    text-align: center;
+                }
+                p{
+                    font-size: 18px;
+                    text-align: center;
+                }
+                .icon1{
+                    grid-column: 1;
+                    padding: 20px;
+                }
+                .icon2{
+                    grid-column: 1;
+                    padding: 20px;
+                }
+                .icon3{
+                    grid-column: 1;
+                    padding: 20px;
+                }
+                .icon4{
+                    grid-column: 1;
+                    padding: 20px;
+                }
+                img{
+                    width: 180px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+        // Slideshow section
+        .box2{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border: solid 1px pink;
+            // .sub-grid{
+            //     grid-template-columns: 1fr;
+            //     grid-template-rows: 1fr 1fr;
+            // }
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        article{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            background-color: rgba(400, 120, 187, 0.5);
+            padding: 20px;
+            // styling h1
+            h1{
+                margin: 0;
+                text-align: center;
+                font-size: 40px;
+                opacity: 1;
+            }
+            // styling p-tag
+            p{
+                margin: 0;
+                text-align: center;
+                font-size: 20px;
+                opacity: 1;
+                color: #fff;
+            }
+        }
+
+        // styling footer for home-page
+        .page-footer{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            .helpAndSupport{
+                grid-column: 1/1;
+            }
+        }
+
+        .footer-bar{
+            border: solid 2px pink;
+            background-color: pink;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            .copy-right{
+                display: inline;
+                float: left;
+            }
+            .followUs{
+                display: inline;
+                float: right;
+                h3, p{
+                    display: inline;
+                    float: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        // Countdown timer styling section
+        .box7{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border: solid 1px black;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            background-color: #000;
+            color: white;
+            div{
+                margin: 30px;
+                .line{
+                    width: 50px;
+                    height: 10px;
+                    background-color: pink;
+                    margin: 0 auto;
+                }
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+
+        // Who we are styling section
+        .box3{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border: solid 1px pink;
+            .sub-grid{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                p{
+                    grid-row: 2/2;
+                }
+                .image-section{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 10px;
+                }
+                img{
+                    text-align: center;
+                    width: 100%;
+                    float: right;
+                }
+            }
+        }
+
+}
+
+// Tablet break-view point (home-page)
+@media screen and (min-width: 960px){
+
+    //Main grid layout
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    // Portfolio styling section
+.box5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    .text-container{
+        grid-column: 1/4;
+    }
+    .port-images{
+        height: 80vh;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        grid-column: 1/4;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        .four-images{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            grid-gap: 10px;
+        }
+    }
+}
+
+    // Icons styling section
+    .box4{
+        margin-left: 5px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border: 1px solid pink;
+        article{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            background-color: black;
+            color: pink;
+            grid-gap: 10px;
+            h4{
+                font-size: 25px;
+                color: #ff0090;
+                text-align: center;
+            }
+            p{
+                font-size: 18px;
+                text-align: center;
+            }
+            .icon1{
+                grid-column: 1;
+                padding: 20px;
+            }
+            .icon2{
+                grid-column: 2;
+                padding: 20px;
+            }
+            .icon3{
+                grid-column: 3;
+                padding: 20px;
+            }
+            .icon4{
+                grid-column: 4;
+                padding: 20px;
+            }
+            img{
+                width: 180px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // Who we are styling section
+    .box3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border: solid 1px pink;
+        .sub-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            p{
+                grid-row: 2/3;
+            }
+            .image-section{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+            }
+            img{
+                text-align: center;
+                width: 100%;
+                float: right;
+            }
+        }
+    }
+
+
+    //Submit section
+    .box8{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        border: solid 1px pink;
+        .fa-paper-plane{
+            color: #ffb3b3;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .input{
+            text-align: center;
+        }
+    }
+
+    // Slideshow section
+    .box2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border: solid 1px pink;
+        // .sub-grid{
+        //     grid-template-columns: 1fr;
+        //     grid-template-rows: 1fr 1fr;
+        // }
+    }
+
+       // styling article
+        article{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            background-color: rgba(400, 120, 187, 0.5);
+            padding: 20px;
+            // styling h1
+            h1{
+                margin: 0;
+                text-align: center;
+                font-size: 40px;
+                opacity: 1;
+            }
+            // styling p-tag
+            p{
+                margin: 0;
+                text-align: center;
+                font-size: 20px;
+                opacity: 1;
+                color: #fff;
+            }
+        }
+
+    .text{
+        font-size: 11px
+    }
+}
+
 
 //CONTACT PAGE
 // Contact page styling
@@ -583,20 +1059,26 @@ overflow: hidden;
  }
 
  .footer-bar2{
-     border: solid 2px pink;
-     background-color: pink;
-     grid-column-start: 1;
-     grid-column-end: 4;
-     .copy-right2{
-         display: inline;
-         float: left;
-     }
-     .followUs2{
-         display: inline;
-         float: right;
-         margin-right: 20px;
-     }
- }
+    border: solid 2px pink;
+    background-color: pink;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    .copy-right2{
+        display: inline;
+        float: left;
+    }
+    .followUs2{
+        display: inline;
+        float: right;
+        h3, p{
+            display: inline;
+            float: right;
+            margin-right: 20px;
+        }
+    }
+}
+
+
 
  .contact-us{
      text-align: center;
@@ -649,6 +1131,90 @@ overflow: hidden;
      width: 100%;
  }
 
+ // Responsive design for contact-page (mobile first)
+@media screen and (max-width: 600px){
+    .contact-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+
+    .contact-us{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border: 1px pink solid;
+    }
+
+        // Footer for contact page
+    .page-footer2{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        .helpAndSupport2{
+            grid-column: 1/1;
+        }
+    }
+
+    .footer-bar2{
+        border: solid 2px pink;
+        background-color: pink;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        .copy-right2{
+            display: inline;
+            float: left;
+        }
+        .followUs2{
+            display: inline;
+            float: right;
+            margin-right: 20px;
+        }
+    }
+
+    .contactUs-container{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 50px;
+        .contact-column{
+        // border: 1px solid black;
+        //  grid-column: 2/3;
+            float: right;
+        }
+    }
+
+    form{
+        //  grid-column: 1/4;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        form{
+            grid-column: 1/2;
+        }
+        h2{
+            grid-column: 1/2;
+        }
+        #textarea{
+            grid-column: 1/2;
+            //  width: 300px;
+        }
+        input{
+            //  width: 100px;
+        }
+        .email{
+            background-color: pink;
+            border-color: pink;
+        }
+    }
+
+    .google-map{
+        grid-column: 1/2;
+        width: 100%;
+    }
+}
+
 //  ABOUT PAGE
 // Grid layout for about-page
 .about-container{
@@ -674,16 +1240,24 @@ overflow: hidden;
     background-color: pink;
     grid-column-start: 1;
     grid-column-end: 4;
+    display: grid;
+    grid-template-columns:1fr 1fr auto;
+
     .copy-rightAbout{
         display: inline;
-        float: left;
+        // float: left;
     }
     .followUsAbout{
-        display: inline;
+        // display: inline;
+        p, h3{
+            display: inline;
+            margin-right: 20px;
+        }
         float: right;
-        margin-right: 20px;
     }
 }
+
+
 
 // About us section
 .about-us{
@@ -793,6 +1367,115 @@ div#subscribe{
     }
 }
 
+ // Responsive design for about-page (mobile first)
+ @media screen and (max-width: 600px){
+    .about-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+
+    div#subscribe{
+        grid-column: 1/2;
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .input{
+            text-align: center;
+            input{
+                border-color: #ffb3b3;
+            }
+        }
+        .submit{
+            background-color: #ffb3b3;
+            border-color: #ffb3b3;
+        }
+    }
+
+    .section{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 30px;
+    }
+
+    .section-two{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        .column-two{
+            grid-column: 1/1;
+        }
+    }
+
+    // Styling the timer section
+    .timer{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-gap: 50px;
+        width: 100%;
+        height: 1000px;
+        background-color: black;
+        padding-left: 80px;
+        color: white;
+    }
+    /*class circle width,margin,display,position,and text-align*/
+    .circle{
+        width: 100%;
+        margin: 6px 20px 20px;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+    }
+    /*class timer div width,height,padding-top*/
+    .timer div{
+            width: 150px;
+            height:150px;
+            padding-top: 50px;
+    }
+
+    // Styling footer for about-page
+    .page-footerAbout{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        .helpAndSupportAbout{
+            grid-column: 1/1;
+        }
+    }
+
+    .footer-barAbout{
+        border: solid 2px pink;
+        background-color: pink;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: grid;
+        grid-template-columns:auto;
+    
+        .copy-rightAbout{
+            display: inline;
+            // float: left;
+        }
+        .followUsAbout{
+            // display: inline;
+            p, h3{
+                display: inline;
+                margin-right: 20px;
+            }
+            float: right;
+        }
+    }
+ }
+
 
 // PORTFOLIO
 // Porfolio grid layout
@@ -830,6 +1513,48 @@ div#subscribe{
       width: 200px;
       height: 200px;
       border: solid 2px black;
+  }
+
+
+// Responsive design for portfolio-page(mobile first)
+  @media screen and (max-width: 600px){
+      // Porfolio grid layout
+        .portfolio-container{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            grid-gap: 10px;
+        }
+
+        // Gallery section in portfolio
+        #flexGallery {
+            grid-column: 1/2;
+            background: #333;
+            padding: .5vw;
+            font-size: 0;
+            display: -ms-flexbox;
+            -ms-flex-wrap: wrap;
+            -ms-flex-direction: column;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            display: -webkit-box;
+            display: flex;
+        }
+        
+        #flexGallery div {
+            -webkit-box-flex: auto;
+            -ms-flex: auto;
+            flex: auto;
+            width: 200px;
+            margin: .5vw;
+        }
+        
+        #flexGallery div{
+            width: 200px;
+            height: 200px;
+            border: solid 2px black;
+        }
+
   }
 
 //   COURSES PAGE
@@ -1138,54 +1863,396 @@ div#subscribe{
         width: 100%;
         height: 800px;
     }
-}
 
-// .expandOne{
-//     border: 2px solid pink;
-// }
-
-
-
-
-    // Responsive design
-@media screen and (max-width: 600px) {
-    .drop-down span{
-        display: none;
+    #shopping_cart{
+        position: fixed;
+        top: 200px;
+        right: -85px;
+        height: 80px;
+        width: 80px;
+        transition: all 0.4s;
+        background: url("../images/shopping-cart.png");
+        @include bgImageContainer;
+        cursor: pointer;
+    
+        #amountInCart{
+            color: white;
+            position: absolute;
+            left: 55%;
+            top: 30%;
+            transform: translate(-50%,-50%);
+        }
     }
-  
-    .main-nav a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-    }
-    .main-nav a.icon {
-      float: right;
-      display: block;
-    }
-  
-    .main-nav.responsive //{position: relative;}
-    .main-nav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .main-nav.responsive a {background-color: #000;
-      float: none;
-      display: block;
-      text-align: center;
-    }
-
-    .responsive .drop-down span{
+    
+    #shopping_list{
+        border: solid 2px pink;
+        overflow: auto;
         display: block;
+        position: fixed;
+        top: 200px;
+        right: -305px;
+        height: 400px;
+        width: 300px;
+        transition: all 0.4s;
+        background: pink;
+        text-align: center;
+        font-family: 'Poppins';
+    
+        button{
+            border: none;
+            outline: none;
+            background: pink;
+            color: white;
+        }
+        h3{
+            text-align: center;
+        }
+        #cartBottom{
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+    
+            h4{
+                float: left;
+                left: 0;
+                margin-left: 10px;
+            }
+            button{
+                margin-right: 20px;
+                float: right;
+                border: none;
+                outline: none;
+                background: pink;
+                color: white;
+                font-family: 'Poppins';
+                padding: 5px;
+                width: 90px;
+                transition: all 0.4s;
+                &:hover{
+                    transition: all 0.4s;
+                    width: 100px;
+                }
+            }
+        }
     }
 
-    .main-nav.responsive .dropdown {float: none;}
-    .main-nav.responsive .dropdown-content {position: relative;}
-    .main-nav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-
-    .text{
-        font-size: 11px
+    html{
+        scroll-behavior: smooth;
     }
 }
+
+
+// Responsive design for courses-page(mobile first)
+@media screen and (max-width: 600px){
+    // Courses-page grid layout
+    .courses-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+
+    // Sub courses grid
+    .subCoursesGrid{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+        h1{
+            text-align: center;
+            grid-column: 1/2;
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        i{
+            color: rgb(228, 44, 75);
+
+        }
+        .cart{
+            display: none;
+            grid-column: 1/2;
+            grid-row: 1/1;
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseOne{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTwo{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseThree{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseFour{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseFive{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseSix{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseSeven{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+            grid-row:1/2;
+        }
+    }
+
+    .subCoursesGridTwo{
+        grid-column:1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+        h1{
+            text-align: center;
+            grid-column: 1/2;
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        i{
+            color: rgb(228, 44, 75);
+        }
+        .courseEight{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseNine{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTen{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .subCoursesGridThree{
+        grid-column:1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+        h1{
+            text-align: center;
+            grid-column: 1/2;
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        i{
+            color: rgb(228, 44, 75);
+        }
+        .courseEleven{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 350px;
+            height: 350px;
+        }
+        .courseTwelve{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .subCoursesGridFour{
+        grid-column:1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+        h1{
+            text-align: center;
+            grid-column: 1/2;
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        i{
+            color: rgb(228, 44, 75);
+        }
+        .courseThirteen{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseFourteen{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseFifteen{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseSixteen{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .subCoursesGridFive{
+        grid-column:1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto auto auto;
+        grid-gap: 50px;
+        h1{
+            text-align: center;
+            grid-column: 1/2;
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        i{
+            color: rgb(228, 44, 75);
+        }
+        .courseNineteen{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTwenty{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTwentyOne{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTwentyTwo{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTwentyThree{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+        .courseTwentyFour{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .subCoursesGridSix{
+        grid-column:1/2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+        h1{
+            text-align: center;
+            grid-column: 1/2;
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        i{
+            color: rgb(228, 44, 75);
+        }
+        .coursesOne{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 100%;
+            height: 800px;
+        }
+        .coursesTwo{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 100%;
+            height: 800px; 
+        }
+        .coursesThree{
+            border: 2px solid pink;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px pink;
+            width: 100%;
+            height: 800px;
+        }
+}
+
+
+
+
