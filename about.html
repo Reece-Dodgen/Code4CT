@@ -121,28 +121,29 @@
     </div>
 
         <!-- Timer section -->
-    <section class="timer">
-        <!-- div class or progress percentage and name of progress -->
-         <div class="circle" id="circle-a">
-            <strong>85%</strong>
-            <h3>Web Design</h3>
-          </div>
-      <!-- div class or progress percentage and name of progress -->
-         <div class="circle" id="circle-b">
-            <strong>80%</strong>
-            <h3>Branding</h3>
-          </div>
-      <!-- div class or progress percentage and name of progress -->
-         <div class="circle" id="circle-c">
-            <strong>90%</strong>
-            <h3>Photography</h3>
-          </div>
-      <!-- div class or progress percentage and name of progress -->
-         <div class="circle" id="circle-d">
-            <strong>97%</strong>
-            <h3>Print Design</h3>
-          </div>
-        </section>
+        <div id="bars" class="timer">
+            <div class="bar" data-percent="80">
+                <h3>Further studies</h3>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="74">
+                <h3>Stem related courses</h3>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="56">
+                <h3>@ university</h3>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="24">
+                <h3>IT skills programmes</h3>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <!-- <div class="bar" data-percent="80">
+                <h3>Server</h3>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div> -->
+        </div>	
+        
 
         <!-- Subscribe section -->
     <div id="subscribe">
@@ -228,16 +229,123 @@
                     <p><i class="fab fa-skype"></i></p>
                     
                 </div>
+
+                <div class="backToTop">
+                    <a href=''><img src="images/back2top..png" width="30px" height="30px" alt="back_Top_Icon" id="back_to_top"></a>
+                </div>
             </div>
-            <div class='thetop'></div>
-            <div class='scrolltop'>
-                <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
-            </div>     
         </div>
 
-
+        <script type="text/javascript">
+            jQuery(document).ready(function($){
+              $(window).scroll(function() {
+                if ($(this).scrollTop() >= 800) {
+                  $('.backToTop').fadeIn('slow');
+                } 							else {
+                  $('.backToTop').fadeOut('slow');
+                }
+              });
+              $('.backToTop').click(function() {
+                $('html,header').animate({
+                  scrollTop : 0
+                }, 2000);
+                return false;
+              });
+            });
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/jquery-circle-progress/dist/circle-progress.js"></script>
         <script src="js/main.js"></script> 
+
+        <script>
+            (function() {
+                
+                var Progress = function( element ) {
+                    
+                    this.context = element.getContext( "2d" );
+                    this.refElement = element.parentNode;
+                    this.loaded = 0;
+                    this.start = 4.72;
+                    this.width = this.context.canvas.width;
+                    this.height = this.context.canvas.height;
+                    this.total = parseInt( this.refElement.dataset.percent, 10 );
+                    this.timer = null;
+                    
+                    this.diff = 0;
+                    
+                    this.init();	
+                };
+                
+                Progress.prototype = {
+                    init: function() {
+                        var self = this;
+                        self.timer = setInterval(function() {
+                            self.run();	
+                        }, 25);
+                    },
+                    run: function() {
+                        var self = this;
+                        
+                        self.diff = ( ( self.loaded / 100 ) * Math.PI * 2 * 10 ).toFixed( 2 );	
+                        self.context.clearRect( 0, 0, self.width, self.height );
+                        self.context.lineWidth = 10;
+                        self.context.fillStyle = "#000";
+                        self.context.strokeStyle = "#d30000";
+                        self.context.textAlign = "center";
+                        
+                        self.context.fillText( self.loaded + "%", self.width * .5, self.height * .5 + 2, self.width );
+                        self.context.beginPath();
+                        self.context.arc( 35, 35, 30, self.start, self.diff / 10 + self.start, false );
+                        self.context.stroke();
+                        
+                        if( self.loaded >= self.total ) {
+                            clearInterval( self.timer );
+                        }
+                        
+                        self.loaded++;
+                    }
+                };
+                
+                var CircularSkillBar = function( elements ) {
+                    this.bars = document.querySelectorAll( elements );
+                    if( this.bars.length > 0 ) {
+                        this.init();
+                    }	
+                };
+                
+                CircularSkillBar.prototype = {
+                    init: function() {
+                        this.tick = 25;
+                        this.progress();
+                        
+                    },
+                    progress: function() {
+                        var self = this;
+                        var index = 0;
+                        var firstCanvas = self.bars[0].querySelector( "canvas" );
+                        var firstProg = new Progress( firstCanvas );
+                        
+                        
+                        
+                        var timer = setInterval(function() {
+                            index++;
+                                
+                            var canvas = self.bars[index].querySelector( "canvas" );
+                            var prog = new Progress( canvas );
+                            
+                            if( index == self.bars.length ) {
+                                    clearInterval( timer );
+                            } 
+                            
+                        }, self.tick * 100);
+                            
+                    }
+                };
+                
+                document.addEventListener( "DOMContentLoaded", function() {
+                    var circularBars = new CircularSkillBar( "#bars .bar" );
+                });
+                
+            })();</script>
 </body>
 </html>

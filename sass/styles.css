@@ -163,6 +163,146 @@ img {
   }
 }
 
+/* // Buttons in slider on home page*/
+#btn-one{
+    border-radius: 4px;
+    background-color: pink;
+
+    color: #fff;
+    text-align: center;
+
+    padding: 16px;
+    width: 150px;
+
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #btn-one{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #btn-one:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  #btn-one:hover {
+    width: 160px;
+
+  }
+
+  #btn-one:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+
+  #btn-two{
+    border-radius: 4px;
+    background-color: pink;
+
+    color: #fff;
+    text-align: center;
+
+    padding: 16px;
+    width: 150px;
+
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #btn-two{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #btn-two:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  #btn-two:hover {
+    width: 160px;
+
+  }
+
+  #btn-two:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  #btn-three{
+    border-radius: 4px;
+    background-color: pink;
+
+    color: #fff;
+    text-align: center;
+
+    padding: 16px;
+    width: 150px;
+
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #btn-three{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #btn-three:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  #btn-three:hover {
+    width: 160px;
+
+  }
+
+  #btn-three:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+
+
+/* This is the first background section of the slider within home page */
 .first-background {
   background: url("../images/Code4CT-homepage.jpg") center, -webkit-gradient(linear, left top, left bottom, from(#2b3946), to(#384a5b));
   background: url("../images/Code4CT-homepage.jpg") center, linear-gradient(180deg, #2b3946, #384a5b);
@@ -215,6 +355,8 @@ img {
   transition: all 0.2s;
 }
 
+
+/* This is the second background section of the slider within home page */
 .second-background {
   background: url("../images/code4ct_homeslider3.jpg") center, -webkit-gradient(linear, left top, left bottom, from(#2b3946), to(#384a5b));
   background: url("../images/code4ct_homeslider3.jpg") center, linear-gradient(180deg, #2b3946, #384a5b);
@@ -266,6 +408,8 @@ img {
   transition: all 0.2s;
 }
 
+
+/* This is the third background section of the slider within home page */
 .third-background {
   background: url("../images/Code4CT-WhyICode-Kholiswa.jpg") center, -webkit-gradient(linear, left top, left bottom, from(#2b3946), to(#384a5b));
   background: url("../images/Code4CT-WhyICode-Kholiswa.jpg") center, linear-gradient(180deg, #2b3946, #384a5b);
@@ -317,11 +461,16 @@ img {
   transition: all 0.2s;
 }
 
+
+
+/* This is the (who we are) section of the home page */
 .box3 {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
   border: solid 1px pink;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .box3 .sub-grid {
@@ -331,6 +480,52 @@ img {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
+}
+
+/* This section is the styling for the read more button */
+#btnRead{
+  border-radius: 4px;
+  background-color: pink;
+
+  color: #fff;
+  text-align: center;
+
+  padding: 16px;
+  width: 150px;
+
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#btnRead{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#btnRead:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#btnRead:hover {
+  width: 160px;
+
+}
+
+#btnRead:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 .box3 .sub-grid p {
@@ -370,6 +565,8 @@ img {
   background-color: black;
   color: pink;
   grid-gap: 10px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .box4 article h4 {
@@ -424,6 +621,8 @@ img {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
+      margin: 0 auto;
+      width: 80%;
 }
 
 .box5 .text-container {
@@ -469,6 +668,8 @@ img {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
+      margin: 0 auto;
+      width: 80%;
 }
 
 .box6 .meet-team {
@@ -512,11 +713,15 @@ img {
   text-align: center;
 }
 
+
+/* This is the submit section before the carousel */
 .box8 {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
-  border: solid 1px pink;
+  border: solid 1px transparent;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .box8 .fa-paper-plane {
@@ -529,6 +734,52 @@ img {
 
 .box8 p {
   text-align: center;
+}
+
+/* This styling allows the submit button to expand once hovered over or clicked on */
+.btn{
+  border-radius: 4px;
+  background-color: pink;
+
+  color: #fff;
+  text-align: center;
+
+  padding: 16px;
+  width: 150px;
+
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  width: 160px;
+
+}
+
+.btn:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 .box8 .input {
@@ -634,6 +885,7 @@ img {
   }
 }
 
+/* This is the styling for the footer section  */
 .page-footer {
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -644,6 +896,8 @@ img {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+      margin: 0 auto;
+      width: 80%;
 }
 
 .page-footer .helpAndSupport {
@@ -676,6 +930,7 @@ img {
   margin-right: 20px;
 }
 
+/* Responsive design for mobile first */
 @media screen and (max-width: 600px) {
   .drop-down span {
     display: none;
@@ -1015,6 +1270,7 @@ img {
   }
 }
 
+/* Responsive design for tablet break point view */
 @media screen and (min-width: 960px) {
   .grid-container {
     display: -ms-grid;
@@ -1213,6 +1469,8 @@ img {
       grid-column-start: 1;
   grid-column-end: 4;
   border: 1px pink solid;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .page-footer2 {
@@ -1225,6 +1483,8 @@ img {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+      margin: 0 auto;
+      width: 80%;
 }
 
 .page-footer2 .helpAndSupport2 {
@@ -1312,6 +1572,51 @@ form .email {
 
 #contact-form {
   float: left;
+}
+
+.email{
+  border-radius: 4px;
+  background-color: deeppink;
+
+  color: #fff;
+  text-align: center;
+
+  padding: 16px;
+  width: 150px;
+
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.email{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.email:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.email:hover {
+  width: 160px;
+
+}
+
+.email:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 .google-map {
@@ -1425,6 +1730,52 @@ form .email {
       grid-template-rows: auto auto auto;
 }
 
+#columnOneButton{
+  border-radius: 4px;
+  background-color: deeppink;
+
+  color: #fff;
+  text-align: center;
+
+  padding: 16px;
+  width: 150px;
+
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#columnOneButton {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#columnOneButton:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#columnOneButton:hover {
+  width: 160px;
+
+}
+
+#columnOneButton:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+
 .page-footerAbout {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -1435,6 +1786,8 @@ form .email {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+      margin: 0 auto;
+      width: 80%;
 }
 
 .page-footerAbout .helpAndSupportAbout {
@@ -1466,6 +1819,51 @@ form .email {
 .footer-barAbout .followUsAbout p, .footer-barAbout .followUsAbout h3 {
   display: inline;
   margin-right: 20px;
+}
+
+.submit{
+  border-radius: 4px;
+  background-color: deeppink;
+
+  color: #fff;
+  text-align: center;
+
+  padding: 16px;
+  width: 150px;
+
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit:hover {
+  width: 160px;
+
+}
+
+.submit:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 .about-us {
@@ -1516,6 +1914,7 @@ form .email {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 20px;
+  margin: 0 auto;
 }
 
 .section-two .column-two {
@@ -1560,6 +1959,33 @@ form .email {
   padding-left: 80px;
   color: white;
 }
+
+
+#bars {
+	margin: 2em auto;
+	max-width: 960px;
+	overflow: hidden;
+}
+
+.bar {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+.bar h3 {
+	font-size: 1.4em;
+	font-weight: normal;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.bar-circle {
+	display: block;
+	margin: 0.7em auto;
+}
+
+
 
 /*class circle width,margin,display,position,and text-align*/
 .circle {
@@ -1744,6 +2170,15 @@ div#subscribe .submit {
       grid-template-rows: auto auto auto;
   grid-gap: 10px;
 }
+
+/* .container_div{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 1px;
+} */
 
 #flexGallery {
   -ms-grid-column: 1;
@@ -1969,6 +2404,7 @@ div#subscribe .submit {
   padding: 10px;
   -webkit-box-shadow: 5px 5px 5px 5px pink;
           box-shadow: 5px 5px 5px 5px pink;
+          margin: 0 auto;         
   width: 300px;
   height: 300px;
 }
@@ -1978,6 +2414,7 @@ div#subscribe .submit {
   padding: 10px;
   -webkit-box-shadow: 5px 5px 5px 5px pink;
           box-shadow: 5px 5px 5px 5px pink;
+          margin: 0 auto; 
   width: 300px;
   height: 300px;
 }
@@ -1987,6 +2424,7 @@ div#subscribe .submit {
   padding: 10px;
   -webkit-box-shadow: 5px 5px 5px 5px pink;
           box-shadow: 5px 5px 5px 5px pink;
+          margin: 0 auto; 
   width: 300px;
   height: 300px;
 }

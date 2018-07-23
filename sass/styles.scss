@@ -146,6 +146,7 @@ img{
     from{opacity: .4}
     to{opacity: 1}
 }
+
 // slider section
 .first-background{
     background: url("../images/Code4CT-homepage.jpg") center,linear-gradient(180deg, #2b3946,#384a5b);
@@ -176,22 +177,6 @@ article{
         color: #fff;
     }
 }
-    // Buttons
-    button{
-        width: 150px;
-        border: solid 2px white;
-        color: white;
-        padding: 10px;
-        margin: 0 auto;
-        background-color: transparent;
-        margin-left: 100px;
-        // hover
-        button:hover{
-            background-color: grey;
-            opacity: 0.5;
-            transition: all 0.2s;
-        }
-    }
 }
 // second-background on slider
 .second-background{
@@ -738,6 +723,7 @@ overflow: hidden;
                 }
             }
         }
+        
         // Slideshow section
         .box2{
             grid-column-start: 1;
@@ -1053,10 +1039,11 @@ overflow: hidden;
      display: grid;
      grid-template-columns: repeat(3,1fr);
      grid-template-rows: auto;
-     .helpAndSupport2{
-         grid-column: 3/4;
-     }
  }
+
+ .helpAndSupport2{
+    grid-column: 3/4;
+}
 
  .footer-bar2{
     border: solid 2px pink;
@@ -1065,14 +1052,14 @@ overflow: hidden;
     grid-column-end: 4;
     .copy-right2{
         display: inline;
-        float: left;
+        margin: left;
     }
     .followUs2{
         display: inline;
-        float: right;
+        margin: right;
         h3, p{
             display: inline;
-            float: right;
+            margin: right;
             margin-right: 20px;
         }
     }
@@ -1517,13 +1504,16 @@ div#subscribe{
 
 
 // Responsive design for portfolio-page(mobile first)
-  @media screen and (max-width: 600px){
+  @media screen and (min-width: 320px){
       // Porfolio grid layout
         .portfolio-container{
             display: grid;
             grid-template-columns: repeat(1,1fr);
             grid-template-rows: auto;
             grid-gap: 10px;
+            display: block;
+            margin: 0 auto;
+            width: 
         }
 
         // Gallery section in portfolio

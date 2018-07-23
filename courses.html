@@ -7,7 +7,9 @@
     <title>courses | Code4ct</title>
     <link rel="stylesheet" href="sass/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src=" https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -29,7 +31,26 @@
                     <button>GO</button>
                 </div>
     </div>
-
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="text_move">
+          <div id="shopping_cart">
+          </div>
+          <div id="shopping_list">
+              <h4>Items added <p id="amountInCart"></h4></p>
+            <h3>Your Cart :</h3>
+            <div id="cartItemList"></div>
+            <div id="cartBottom">
+              <h4 id="cartTotal">Total :</h4>
+              <button id="emptyCartList">Empty Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="myFunction">
+      <img  class="cart" src="http://cdn3.volusion.com/pjqfd.hskyr/v/vspfiles/photos/110cc-Wrangler-Go-Cart-2.jpg?1360348938" alt="" onclick="openNav()"></span>
+   
 
     <!-- Available courses section -->
     <div class="subCoursesGridSix">
@@ -37,7 +58,7 @@
 
 
 
-        <div> <div class="expandOne"><h4>Create With Code Series <i class="fas fa-plus-circle c1" style="position: relative; left: 80px;"></i></h4></div>
+        <div> <div class="expandOne"><h4>Create With Code Series <i class="fas fa-plus-circle c1" style="position: relative; left: 15px;"></i></h4></div>
       
        
         <div class="coursesOne">
@@ -58,7 +79,7 @@
         <div>
             <div></div>
             
-            <h4>Tech Innovators Level 1<i class="fas fa-plus-circle c2" style="position: relative; left: 80px;"></i></h4>
+            <h4>Tech Innovators Level 1<i class="fas fa-plus-circle c2" style="position: relative; left: 15px;"></i></h4>
         <div class="coursesTwo">
             <p>Covering an introduction to web development as well as an introduction to design thinking, this course helps a learner explore how technology can be used for social innovation while developing fundamentals knowledge of programming.</p>
             <p><strong>Stream includes</strong></p>
@@ -81,7 +102,7 @@
         </div>
     </div>
 
-        <div><h4>Tech Innovators Level 2<i class="fas fa-plus-circle c3" style="position: relative; left: 80px;"></i></h4>
+        <div><h4>Tech Innovators Level 2<i class="fas fa-plus-circle c3" style="position: relative; left: 15px;"></i></h4>
         <div class="coursesThree">
             <p>Going beyond the basics, this course enables a learner move from basic coding proficiency to the level where they are able to implement a basic coding project independently. The course has a strong focus on developing leadership skills and offers abundant opportunity for learners to interact with the tech industry. </p>
             <p><strong>Stream includes</strong></p>
@@ -102,54 +123,54 @@
     </div>
     </div>
 
+  
+
     
     <div class="subCoursesGrid">
         <h1>Introductory Coding Courses</h1>
-        <div><h4>Intro to coding: Web Pages<i class="fas fa-plus-circle c4" style="position: relative; left: 80px;"></i></h4>
+        <div><h4>Intro to coding: Web Pages<i class="fas fa-plus-circle c4" style="position: relative; left: 15px;"></i></h4>
         <div class="courseOne">
             <p>Code a simple one-page website using HTML and JQuery.</p>
             <p><strong>Duration</strong>: 3 hours</p>
             <p><strong>Price</strong>: R250</p>
+            <button id="course_btn1">+</button>
         </div>
     </div>
 
-        <div><h4>Into to coding: Music<i class="fas fa-plus-circle c5" style="position: relative; left: 80px;"></i></h4>
+        <div><h4>Into to coding: Music<i class="fas fa-plus-circle c5" style="position: relative; left: 15px;"></i></h4>
         <div class="courseTwo">
             <p>Code a song using SonicPi software on a Raspberry Pi computer.</p>
             <p><strong>Duration</strong>: 3 hours</p>
             <p><strong>Price</strong>: R250</p>
+            <button class="resize" id="course_btn2">+</button>
         </div>
     </div>
 
-            <div><h4>Intro to Coding: Animation<i class="fas fa-plus-circle c6" style="position: relative; left: 80px;"></i></h4>
+            <div><h4>Intro to Coding: Animation<i class="fas fa-plus-circle c6" style="position: relative; left: 15px;"></i></h4>
         <div class="courseThree">
                 <p>Create a 2D animation using coding language JavaScript.</p>
                 <p><strong>Duration</strong>: 3 hours</p>
                 <p><strong>Price</strong>: R250</p>
+                <button id="course_btn3">+</button>
         </div>
     </div>
 
-            <div><h4>Create with Code: Web Pages<i class="fas fa-plus-circle c7" style="position: relative; left: 80px;"></i></h4>
-        <div class="courseFour">
-                <p>Learn how the internet works and code a simple one-page website using HTML, CSS and JQuery.</p>
-                <p><strong>Duration</strong>: 3 hours</p>
-                <p><strong>Price</strong>: R960</p>
-        </div>
-    </div>
-
-            <div><h4>Create with Code: Music<i class="fas fa-plus-circle c8" style="position: relative; left: 80px;"></i></h4>
+ 
+            <div><h4>Create with Code: Music<i class="fas fa-plus-circle c8" style="position: relative; left: 15px;"></i></h4>
         <div class="courseFive">
                 <p>Learn computer science principles by coding music with a Raspberry Pi computer.</p>
                 <p><strong>Duration</strong>: 3 hours</p>
                 <p><strong>Price</strong>: R960</p>
+                <button id="course_btn5">+</button>
         </div>
     </div>
 
-            <div><h4>Create with Code: Animation<i class="fas fa-plus-circle c9" style="position: relative; left: 80px;"></i></h4>
+            <div><h4>Create with Code: Animation<i class="fas fa-plus-circle c9" style="position: relative; left: 15px;"></i></h4>
         <div class="courseSix">
                 <p>Learn computer science principles by coding animations using JavaScript.</p>
                 <p><strong>Duration</strong>: 3 hours</p>
                 <p><strong>Price</strong>: R960</p>
+                <button id="course_btn6">+</button>
         </div>
     </div>
 
@@ -158,46 +179,38 @@
                 <p>Learn how to set up a development environment and practical skills to start coding.</p>
                 <p><strong>Duration</strong>: 3 hours</p>
                 <p><strong>Price</strong>: R250</p>
+                <button id="course_btn7">+</button>
         </div>
     </div>
 
-<div id="shopping_cart">
-        <h4 id="amountInCart"></h4>
-    </div>
-    <div id="shopping_list">
-        <h3>Your Cart :</h3>
-        <div id="cartItemList"></div>
-        <div id="cartBottom">
-            <h4 id="cartTotal">Total :</h4>
-            <button id="emptyCartList">Empty Cart</button>
-        </div>
-    </div>
-    </div>
 
     <div class="subCoursesGridTwo">
         <h1 style="text-align: center">Beginner Coding Courses</h1>
 
-        <div><h4>Beginner JavaScript<i class="fas fa-plus-circle c11" style="position: relative; left: 80px;"></i></h4>
+        <div><h4>Beginner JavaScript<i class="fas fa-plus-circle c11" style="position: relative; left: 15px;"></i></h4>
         <div class="courseEight">
                 <p>Develop a basic proficiency in programming structures and methods in JavaScript so that you are able to create an interactive web application.</p>
                 <p><strong>Duration</strong>: 6 days</p>
                 <p><strong>Price</strong>: R1800</p>
+                <button id="course_btn8">+</button>
         </div>
     </div>
 
-            <div><h4>Beginner Front End Web Development<i class="fas fa-plus-circle c12" style="position: relative; left: 80px;"></i></h4>
+            <div><h4>Beginner Front End Web Development<i class="fas fa-plus-circle c12" style="position: relative; left: 15px;"></i></h4>
         <div class="courseNine">
                 <p>Develop a good proficiency in CSS and an understanding of web design principles so that you are able to create visually pleasing web pages.</p>
                 <p><strong>Duration</strong>: 6 days</p>
                 <p><strong>Price</strong>: R1800</p>
+                <button id="course_btn9">+</button>
         </div>
     </div>
 
-        <div><h4>Beginner Python<i class="fas fa-plus-circle c13" style="position: relative; left: 80px;"></i></h4>
+        <div><h4>Beginner Python<i class="fas fa-plus-circle c13" style="position: relative; left: 50px;"></i></h4>
         <div class="courseTen">
                 <p>Develop a basic proficiency in programming principles and methods in Python.</p>
                 <p><strong>Duration</strong>: 6 days</p>
                 <p><strong>Price</strong>: R1800</p>
+                <button id="course_btn10">+</button>
         </div>
     </div>
     </div>
@@ -210,6 +223,7 @@
                 <p>Develop an understanding of the front and backend development environment and basic proficiency in server side JavaScript and object-oriented programming. By the end of the course you will be able to architect an application, control flow in an application and persist and retrieve data in a database.</p>
                 <p><strong>Duration</strong>: 6 days</p>
                 <p><strong>Price</strong>: R1800</p>
+                <button id="course_btn11">+</button>
         </div>
     </div>
 
@@ -218,6 +232,7 @@
                 <p>Learn how to manage and deploy code to a server environment so that you can host your own web pages.</p>
                 <p><strong>Duration</strong>: 4 days</p>
                 <p><strong>Price</strong>: R1200</p>
+                <button id="course_btn12">+</button>
         </div>
     </div>
     </div>
@@ -232,6 +247,7 @@
             <p>Work in groups to design an innovative solution to a social issue by using the design thinking process.</p>
             <p><strong>Duration</strong>: 3 days</p>
             <p><strong>Price</strong>: R750</p>
+            <button id="course_btn13">+</button>
         </div>
     </div>
 
@@ -240,6 +256,7 @@
             <p>Work in groups to create and present a code project that addresses a particular issue. </p>
             <p><strong>Duration</strong>: 5 days</p>
             <p><strong>Price</strong>: R1500</p>
+            <button id="course_btn14">+</button>
         </div>
     </div>
 
@@ -248,6 +265,7 @@
             <p>Learn how to manage and deploy code to a server environment so that you can host your own web pages.</p>
             <p><strong>Duration</strong>: TBC</p>
             <p><strong>Price</strong>: TBC</p>
+            <button id="course_btn15">+</button>
         </div>
     </div>
 
@@ -256,6 +274,7 @@
             <p>Spend a week at a tech company and gain experience in industry.</p>
             <p><strong>Duration</strong>: 5 days</p>
             <p><strong>Price</strong>: R1500</p>
+            <button id="course_btn16">+</button>
         </div>
     </div>
     </div>
@@ -268,6 +287,7 @@
             <p>Learn about tech careers from a panel of working professionals who will share their experiences with you.</p>
             <p><strong>Duration</strong>: 1 day</p>
             <p><strong>Price</strong>: R300</p>
+            <button id="course_btn17">+</button>
         </div>
     </div>
 
@@ -276,6 +296,7 @@
             <p>Learn how to present an idea or project in a compelling manner.</p>
             <p><strong>Duration</strong>: 1 day</p>
             <p><strong>Price</strong>: R300</p>
+            <button id="course_btn18">+</button>
         </div>
     </div>
 
@@ -284,6 +305,7 @@
             <p>Learn how to present your skills effectively</p>
             <p><strong>Duration</strong>: 1 day</p>
             <p><strong>Price</strong>: R300</p>
+            <button id="course_btn19">+</button>
         </div>
     </div>
 
@@ -292,6 +314,7 @@
             <p>Learn how to present yourself professionally when networking and put your skills to the test by attending local tech events. You will attend a training session and attend one event of your choice.</p>
             <p><strong>Duration</strong>: 2 day</p>
             <p><strong>Price</strong>: R300</p>
+            <button id="course_btn20">+</button>
         </div>
     </div>
 
@@ -300,6 +323,7 @@
             <p>Learn how to communicate and collaborate in a 21st century work environment using digital workplace tools. </p>
             <p><strong>Duration</strong>: 1 day</p>
             <p><strong>Price</strong>: R300</p>
+            <button id="course_btn21">+</button>
         </div>
     </div>
 
@@ -308,6 +332,7 @@
             <p>Make informed decisions about your future studies.</p>
             <p><strong>Duration</strong>: 1 day</p>
             <p><strong>Price</strong>: R300</p>
+            <button id="course_btn22">+</button>
         </div>
     </div>
     </div>
@@ -362,22 +387,38 @@
                     <p><i class="fab fa-skype"></i></p>
                 </div>
 
-
-
+                <div class="backToTop">
+                    <a href=''><img src="images/back2top..png" width="30px" height="30px" alt="back_Top_Icon" id="back_to_top"></a>
+                </div>
             </div>     
         </div>
-        <div class='thetop'></div>
-        <div class='scrolltop'>
-            <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
-        </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+          $(window).scroll(function() {
+            if ($(this).scrollTop() >= 800) {
+              $('.backToTop').fadeIn('slow');
+            } 							else {
+              $('.backToTop').fadeOut('slow');
+            }
+          });
+          $('.backToTop').click(function() {
+            $('html,header').animate({
+              scrollTop : 0
+            }, 2000);
+            return false;
+          });
+        });
+    </script>
+
+    <script src="js/jquery-circle-progress/courses.js"></script>
     <script>
         // courses toggle down and up
         $(document).ready(function(){
             $(".coursesOne").hide();
             $(".c1").click(function(){
-                $(".coursesOne").toggle(2000);
+                $(".coursesOne").toggle(500);
                 $(".coursesOne").show();
             });
         });
@@ -577,6 +618,24 @@
             $(".courseTwentyFour").show();
         });
     }); 
+
+        function myFunction() {
+      var x = document.getElementsByClassName("cart");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    //sidebar
+    function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+    };
     </script>
 
 </body>

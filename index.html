@@ -36,9 +36,8 @@
                     <h1>Code of Cape Town</h1>
                     <p>We want to see young women empowered to leverage technology for social innovation, so that there is<br>greater diversity in the African tech industry.
                     We want high school girls to have an enabling environment<br>to imagine and create new technology that is relevant to South African context.</p>
-                    <section class="buttons">
-                        <button type="button">START CODING</button>
-                        <button type="button">READ MORE</button>
+                    <section>
+                        <button type="button" id="btn-two">START CODING</button>
                     </section>
                 </article>
             </section>
@@ -48,9 +47,8 @@
                         <h1>Code of Cape Town</h1>
                         <p>We want to see young women empowered to leverage technology for social innovation, so that there is<br>greater diversity in the African tech industry.
                         We want high school girls to have an enabling environment<br>to imagine and create new technology that is relevant to South African context.</p>
-                        <section class="buttons">
-                            <button type="button">START CODING</button>
-                            <button type="button">READ MORE</button>
+                        <section>
+                            <button type="button" id="btn-one">START CODING</button>
                         </section>
                 </article>
             </div>
@@ -60,9 +58,8 @@
                         <h1>Code of Cape Town</h1>
                         <p>We want to see young women empowered to leverage technology for social innovation, so that there is<br>greater diversity in the African tech industry.
                         We want high school girls to have an enabling environment<br>to imagine and create new technology that is relevant to South African context.</p>
-                        <section class="buttons">
-                            <button type="button">START CODING</button>
-                            <button type="button">READ MORE</button>
+                        <section>
+                            <button type="button" id="btn-three">START CODING</button>
                         </section>
                 </article>
 
@@ -86,7 +83,7 @@
     
                     These are skills that everyone should have. Even if you have no intention of becoming a professional coder, you will benefit from knowing how to think in this way in this increasingly computerized economy. A growing number of permanent job positions that use information technology to deliver a product or a service are becoming available in the local economy.  It is estimated that nearly 75000 such jobs will come online in South Africa within the next five years.  These digital jobs will mostly be driven by the ICT, Business Process Outsourcing (BPO), and the financial services industries.  These are the fastest growing sectors in our economy.  They are also the sectors that have the highest demand for entry-level digital skills.
                     </p>
-                    <a href="#">Read more</a>
+                    <button type="button" id="btnRead">Read more</button>
                     
 
                     <div class="image-section">
@@ -97,11 +94,12 @@
                     </div>
             </div>
         </div>
+
         <!-- Icon section -->
         <div class="box4">
             <article>
                 <div class="icon1">
-                    <img src="images/icondoc.png" alt="">
+                    <img src="images/iconpc.png" alt="">
                     <div class="icon-info">
                         <h4>Coding</h4>
                         <p>Learn how to build your own websites using HTML, CSS, JavaScript & JQuery. Go on to explore exciting modules from game development to user experience design.</p>
@@ -109,7 +107,7 @@
                 </div>
 
                 <div class="icon2">
-                        <img src="images/icondoc.png" alt="">
+                        <img src="images/icons.png" alt="">
                         <div class="icon-info">
                             <h4>Communication</h4>
                             <p>Learn how to pitch ideas, represent yourself online, communicate professionally and work with online collaboration tools.</p>
@@ -117,7 +115,7 @@
                 </div>
 
                 <div class="icon3">
-                        <img src="images/icondoc.png" alt="">
+                        <img src="images/iconspan.png" alt="">
                         <div class="icon-info">
                             <h4>Problem Solving</h4>
                             <p>Apply your coding skills to issues you are interested in. You will learn how to tackle complex problems using the design thinking process.</p>
@@ -133,6 +131,7 @@
                 </div>   
             </article>
         </div>
+
             <!-- Portfolio section -->
         <div class="box5">
             <div class="text-container">
@@ -226,6 +225,8 @@
             </div>
         </div>
 
+
+        <!-- This is the submit section -->
         <div class="box8">
             <h2><i class="fas fa-paper-plane"></i>Subscribe To Us</h2>
             <p>Individuals and companies may choose to align themselves to our work by becoming a #FriendofCode4CT.</p>
@@ -250,7 +251,6 @@
                 <img src="images/carousel10.png"  width="180px"  height="180px"alt="">
                 <img src="images/carousel11.png"  width="180px"  height="180px"alt="">
                 <img src="images/carousel12.png"  width="180px"  height="180px"alt="">
-                <img src=""  width="180px"  height="180px"alt="">
                 <img src="images/carousel13.png"  width="180px"  height="180px"alt="">
                 <img src="images/carousel14.png"  width="180px"  height="180px"alt="">
                 <img src="images/carousel15.png"  width="180px"  height="180px"alt="">
@@ -273,11 +273,11 @@
             <div class="company">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Affiliate program</a></li>
+                        <li>About us</li>
+                        <li>Contact us</li>
+                        <li>Blog</li>
+                        <li>Testimonials</li>
+                        <li>Affiliate program</li>
                     </ul>
             </div>
 
@@ -306,17 +306,30 @@
                     <p><i class="fab fa-skype"></i></p>
                     <h3>Follow us:</h3>
                 </div>
+
+                <div class="backToTop">
+                    <a href=''><img src="images/back2top..png" width="30px" height="30px" alt="back_Top_Icon" id="back_to_top"></a>
+                </div>
             </div>
-
-            <div class='thetop'></div>
-            <div class='scrolltop'>
-                <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
-            </div>
-
-
         </div>
    
-
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $(window).scroll(function() {
+            if ($(this).scrollTop() >= 800) {
+                $('.backToTop').fadeIn('slow');
+            } 							else {
+                $('.backToTop').fadeOut('slow');
+            }
+            });
+            $('.backToTop').click(function() {
+            $('html,header').animate({
+                scrollTop : 0
+            }, 2000);
+            return false;
+            });
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
